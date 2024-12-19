@@ -1,6 +1,7 @@
 import { getConnection } from "../database/connection.js";
 import sql from "mssql";
 
+// Lista todos los estados almacenados en la db
 export const getStates = async (req, res) => {
   const pool = await getConnection();
 
@@ -9,7 +10,7 @@ export const getStates = async (req, res) => {
   res.json(result.recordset);
 };
 
-// Lista todos los estados almacenados en la db
+// Lista un estado almacenado en la db
 export const getState = async (req, res) => {
   console.log(req.params.id);
 
@@ -26,7 +27,7 @@ export const getState = async (req, res) => {
   return res.json(result.recordset[0]);
 };
 
-// Lista un estado almacenado en la db
+// Crea un estado que se almacena en la db
 export const createState = async (req, res) => {
   console.log(req.body);
 
