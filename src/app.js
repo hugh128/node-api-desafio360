@@ -4,6 +4,8 @@ import statesRoutes from './routes/states.routes.js';
 
 const app = expres();
 
+app.use(expres.json());
+
 app.use(statesRoutes);
 app.use(prodcutsRoutes);
 
