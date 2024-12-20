@@ -1,0 +1,9 @@
+import { config } from "dotenv";
+config();
+
+export const DB_PORT = process.env.DB_PORT || 3000;
+export const DB_USER = process.env.DB_USER;
+export const DB_PASSWORD = process.env.DB_PASSWORD;
+export const DB_SEVER = process.env.DB_SEVER;
+export const DB_DATABASE = process.env.DB_DATABASE;
+export const DB_ENCRYPT = process.env.DB_ENCRYPT;
