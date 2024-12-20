@@ -3,6 +3,7 @@ import cors from "cors";
 import morgan from "morgan";
 import prodcutsRoutes from "./routes/products.routes.js";
 import statesRoutes from "./routes/states.routes.js";
+import rolesRoutes from "./routes/roles.routes.js";
 
 const app = expres();
 
@@ -13,6 +14,7 @@ app.use(expres.json());
 
 //Rutas
 app.use("/api", statesRoutes);
+app.use("/api", rolesRoutes);
 app.use("/api", prodcutsRoutes);
 
 export default app;
