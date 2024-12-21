@@ -7,6 +7,7 @@ import customersRoutes from "./routes/customers.routes.js";
 import usersRoutes from "./routes/users.routes.js";
 import categoryRoutes from "./routes/categories.routes.js";
 import productsRoutes from "./routes/products.routes.js";
+import ordersRoutes from "./routes/orders.routes.js";
 
 const app = expres();
 
@@ -22,5 +23,6 @@ app.use("/api/v1", customersRoutes);
 app.use("/api/v1", usersRoutes);
 app.use("/api/v1", categoryRoutes);
 app.use("/api/v1", productsRoutes);
+app.use("/api/v1", ordersRoutes);
 
 export default app;
