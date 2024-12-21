@@ -1,12 +1,12 @@
 import expres, { urlencoded } from "express";
 import cors from "cors";
 import morgan from "morgan";
-import prodcutsRoutes from "./routes/products.routes.js";
 import statesRoutes from "./routes/states.routes.js";
 import rolesRoutes from "./routes/roles.routes.js";
 import customersRoutes from "./routes/customers.routes.js";
 import usersRoutes from "./routes/users.routes.js";
 import categoryRoutes from "./routes/categories.routes.js";
+import productsRoutes from "./routes/products.routes.js";
 
 const app = expres();
 
@@ -21,6 +21,6 @@ app.use("/api/v1", rolesRoutes);
 app.use("/api/v1", customersRoutes);
 app.use("/api/v1", usersRoutes);
 app.use("/api/v1", categoryRoutes);
-app.use("/api/v1", prodcutsRoutes);
+app.use("/api/v1", productsRoutes);
 
 export default app;

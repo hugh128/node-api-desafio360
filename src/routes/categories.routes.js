@@ -5,7 +5,7 @@ import {
   getCategory,
   updateCategory,
   updateCategoryState,
-} from "../controllers/categories.contmollers.js";
+} from "../controllers/categories.controllers.js";
 
 const router = Router();
 
