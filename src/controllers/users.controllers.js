@@ -149,7 +149,7 @@ export const updateUser = async (req, res) => {
 };
 
 // Actualizar estado de usuario
-export const updateUserStatus = async (req, res) => {
+export const updateUserState = async (req, res) => {
   const { id } = req.params;
   const { newState } = req.body;
 
@@ -169,7 +169,6 @@ export const updateUserStatus = async (req, res) => {
 
     res.status(200).json({
       message: `Estado cambiado a ${newState} correctamente`,
-      data: { userID: id },
       data: { userId: id, newState },
     });
   } catch (error) {
