@@ -8,6 +8,7 @@ import usersRoutes from "./routes/users.routes.js";
 import categoryRoutes from "./routes/categories.routes.js";
 import productsRoutes from "./routes/products.routes.js";
 import ordersRoutes from "./routes/orders.routes.js";
+import authRoutes from "./routes/auth.routes.js";
 
 const app = expres();
 
@@ -24,5 +25,6 @@ app.use("/api/v1", usersRoutes);
 app.use("/api/v1", categoryRoutes);
 app.use("/api/v1", productsRoutes);
 app.use("/api/v1", ordersRoutes);
+app.use("/api/v1", authRoutes);
 
 export default app;

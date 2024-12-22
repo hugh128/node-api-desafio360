@@ -1,5 +1,6 @@
 import { getConnection } from "../database/connection.js";
 import sql from "mssql";
+import { encrypt } from "../helpers/handleBcrypt.js";
 
 // Obtener usuarios
 export const getUsers = async (req, res) => {
@@ -38,60 +39,6 @@ export const getUser = async (req, res) => {
   }
 };
 
-// Crear usuario
-export const createUser = async (req, res) => {
-  const {
-    rol,
-    state,
-    email,
-    fullName,
-    password,
-    phone,
-    dateOfBirth,
-    customer,
-  } = req.body;
-
-  if (
-    [rol, state, email, fullName, password, phone, dateOfBirth].some(
-      (field) => !field
-    )
-  ) {
-    return res
-      .status(400)
-      .json({ message: "Por favor, completa todos los campos" });
-  }
-
-  if (state !== "Activo" && state !== "Inactivo") {
-    return res
-      .status(400)
-      .json({ message: "El estado debe ser 'Activo' o 'Inactivo'" });
-  }
-
-  try {
-    const pool = await getConnection();
-    const result = await pool
-      .request()
-      .input("rol_nombre", sql.VarChar, rol)
-      .input("estados_nombre", sql.VarChar, state)
-      .input("correoElectronico", sql.VarChar, email)
-      .input("nombreCompleto", sql.VarChar, fullName)
-      .input("password", sql.VarChar, password)
-      .input("telefono", sql.VarChar, phone)
-      .input("fechaNacimiento", sql.Date, dateOfBirth)
-      .input("clientes_idClientes", sql.Int, customer)
-      .execute("p_insertarUsuario");
-
-    res.status(200).json({
-      message: "Usuario creado correctamente",
-      data: { userID: result.recordset[0].ID, rol, fullName },
-    });
-  } catch (error) {
-    res
-      .status(500)
-      .json({ message: "Error al crear usuario", error: error.message });
-  }
-};
-
 // Actualizar usuario
 export const updateUser = async (req, res) => {
   const { id } = req.params;
@@ -116,13 +63,8 @@ export const updateUser = async (req, res) => {
       .json({ message: "Por favor, completa todos los campos" });
   }
 
-  if (state !== "Activo" && state !== "Inactivo") {
-    return res
-      .status(400)
-      .json({ message: "El estado debe ser 'Activo' o 'Inactivo'" });
-  }
-
   try {
+    const hashedPassword = await encrypt(password);
     const pool = await getConnection();
     const result = pool
       .request()
@@ -131,7 +73,7 @@ export const updateUser = async (req, res) => {
       .input("estados_nombre", sql.VarChar, state)
       .input("correoElectronico", sql.VarChar, email)
       .input("nombreCompleto", sql.VarChar, fullName)
-      .input("password", sql.VarChar, password)
+      .input("password", sql.VarChar, hashedPassword)
       .input("telefono", sql.VarChar, phone)
       .input("fechaNacimiento", sql.Date, dateOfBirth)
       .input("clientes_idClientes", sql.Int, customer)
