@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { authenticateUser, authorizeRole } from "../middleware/authMiddleware.js";
 import {
   getUsers,
   getUser,
@@ -8,9 +9,9 @@ import {
 
 const router = Router();
 
-router.get("/usuarios", getUsers);
-router.get("/usuarios/:id", getUser);
-router.put("/usuarios/:id", updateUser);
-router.patch("/usuarios/:id/estado", updateUserState);
+router.get("/usuarios", authenticateUser, authorizeRole(["Administrador", "Operador"]), getUsers);
+router.get("/usuarios/:id", authenticateUser, authorizeRole(["Administrador", "Operador"]), getUser);
+router.put("/usuarios/:id", authenticateUser, authorizeRole(["Administrador", "Operador"]), updateUser);
+router.patch("/usuarios/:id/estado", authenticateUser, authorizeRole(["Administrador", "Operador"]), updateUserState);
 
 export default router;

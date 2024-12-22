@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { authenticateUser, authorizeRole } from "../middleware/authMiddleware.js";
 import {
   createRol,
   getRol,
@@ -8,9 +9,9 @@ import {
 
 const router = Router();
 
-router.get("/roles", getRoles);
-router.get("/roles/:id", getRol);
-router.post("/roles", createRol);
-router.put("/roles/:id", updateRol);
+router.get("/roles", authenticateUser, authorizeRole(["Administrador", "Operador"]), getRoles);
+router.get("/roles/:id", authenticateUser, authorizeRole(["Administrador", "Operador"]), getRol);
+router.post("/roles", authenticateUser, authorizeRole(["Administrador", "Operador"]), createRol);
+router.put("/roles/:id", authenticateUser, authorizeRole(["Administrador", "Operador"]), updateRol);
 
 export default router;

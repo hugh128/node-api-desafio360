@@ -1,6 +1,7 @@
 import { getConnection } from "../database/connection.js";
 import sql from "mssql";
-import { encrypt, compare } from "../helpers/handleBcrypt.js";
+import { encrypt, compare } from "../utils/handleBcrypt.js";
+import { generateToken } from "../utils/tokenUtils.js";
 
 // Iniciar sesion
 export const loginUser = async (req, res) => {
@@ -22,16 +23,20 @@ export const loginUser = async (req, res) => {
     const isMatch = await compare(password, user.password);
 
     if (!isMatch) {
-      return res.status(400).json({ message: "Contraseña incorrecta" });
+      return res.status(400).json({ message: "Credenciales invalidas" });
     }
 
-    console.log(user);
-    res
-      .status(200)
-      .json({
-        message: "Inicio de sesion exitoso",
-        user: { id: user.idUsuarios, name: user.nombreCompleto },
-      });
+    const userRol = await pool
+      .request()
+      .input("id", sql.Int, user.rol_idRol)
+      .query("SELECT nombre FROM Rol WHERE idRol = @id");
+
+    const token = await generateToken(user.idUsuarios, userRol.recordset[0].nombre);
+
+    res.status(200).json({
+      message: "Inicio de sesion exitoso",
+      user: { id: user.idUsuarios, name: user.nombreCompleto, token },
+    });
   } catch (error) {
     res
       .status(500)

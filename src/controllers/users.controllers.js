@@ -1,6 +1,6 @@
 import { getConnection } from "../database/connection.js";
 import sql from "mssql";
-import { encrypt } from "../helpers/handleBcrypt.js";
+import { encrypt } from "../utils/handleBcrypt.js";
 
 // Obtener usuarios
 export const getUsers = async (req, res) => {
