@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "45fc5fcc-4de7-4d58-83df-385308575834",
+		"name": "REST API desafio web 360",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38134713"
+	},
+	"item": [
+		{
+			"name": "Autorizacion",
+			"item": [
+				{
+					"name": "Login de usuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"luis_g@empresa.com\",\r\n    \"password\": \"operador2023\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estados",
+			"item": [
+				{
+					"name": "Obtener Estados",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTczNDg5Mzk2MywiZXhwIjoxNzM0OTgwMzYzfQ.N1fJdjMSun3VFUSZl-ydTvOzGwZTw968OpaMoHqa6sI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/estados"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear estados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTczNDg5ODk0MiwiZXhwIjoxNzM0OTg1MzQyfQ.nlw40SWyuT56tdPNtKVBUUy2gwi7rPQWR2sXGAr-wwE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"En transito\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/estados"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Crear Roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTczNDg5Mzk2MywiZXhwIjoxNzM0OTgwMzYzfQ.N1fJdjMSun3VFUSZl-ydTvOzGwZTw968OpaMoHqa6sI"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cliente\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/roles"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTczNDg5Mzk2MywiZXhwIjoxNzM0OTgwMzYzfQ.N1fJdjMSun3VFUSZl-ydTvOzGwZTw968OpaMoHqa6sI"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/roles"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Obtener clientes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTczNDg5ODk0MiwiZXhwIjoxNzM0OTg1MzQyfQ.nlw40SWyuT56tdPNtKVBUUy2gwi7rPQWR2sXGAr-wwE"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/clientes"
+					},
+					"response": []
+				},
+				{
+					"name": "Crear cliente",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTczNDg5ODk0MiwiZXhwIjoxNzM0OTg1MzQyfQ.nlw40SWyuT56tdPNtKVBUUy2gwi7rPQWR2sXGAr-wwE"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"name\": null,\r\n    \"tradeName\": \"Comercio Online-GT\",\r\n    \"address\": \"Calle La Floresta, Zona 4, Ciudad\",\r\n    \"phone\": \"12334455\",\r\n    \"email\": \"contacto@comercioonline.com.gt\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/clientes/10"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Crear usuario",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTczNDg5ODk0MiwiZXhwIjoxNzM0OTg1MzQyfQ.nlw40SWyuT56tdPNtKVBUUy2gwi7rPQWR2sXGAr-wwE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rol\": \"Operador\",\r\n    \"state\": \"Activo\",\r\n    \"email\": \"eli.moreno@empresa.com\",\r\n    \"fullName\": \"Elizabeth Moreno\",\r\n    \"password\": \"opeli2024\",\r\n    \"phone\": \"12123484\",\r\n    \"dateOfBirth\": \"1994-01-29\",\r\n    \"customerId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar estado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newState\": \"Inactivo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/usuarios/7/estado"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "Crear categorias",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"userId\": 2,\r\n    \"name\": \"Alimentos en Conserva\",\r\n    \"state\": \"Activo\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/categorias"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener categorias",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/categorias"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar estado categoria",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"newState\": \"Inactivo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/categorias/10/estado"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Crear productos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"categoryId\": 6,\r\n    \"userId\": 7,\r\n    \"name\": \"Pescado Congelado\",\r\n    \"brand\": \"Congelados\",\r\n    \"code\": \"PESCCON123\",\r\n    \"state\": \"Activo\",\r\n    \"stock\": 100,\r\n    \"price\": 50.00,\r\n    \"photo\": null\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/productos"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener productos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/productos"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar estado producto",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newState\": \"Inactivo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/productos/15/estado"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orden",
+			"item": [
+				{
+					"name": "Crear orden",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 8,\r\n    \"details\": [\r\n        { \"productos_idProductos\": 12, \"cantidad\": 8, \"precio\": 18.00 },\r\n        { \"productos_idProductos\": 7, \"cantidad\": 12, \"precio\": 35.00 }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/ordenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener ordenes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/ordenes"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener detalles de orden",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/api/v1/ordenes/1/detalle"
+					},
+					"response": []
+				},
+				{
+					"name": "Cambiar estado de orden",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sIjoiT3BlcmFkb3IiLCJpYXQiOjE3MzQ5MDQwMTAsImV4cCI6MTczNDk5MDQxMH0.KjAEkHuv-dOAApECbpko_iTJpRVJb10WXGtK1o_tBP0"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"newState\": \"Entregado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/api/v1/ordenes/1/estado"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
