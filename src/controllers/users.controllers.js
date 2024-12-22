@@ -50,7 +50,7 @@ export const updateUser = async (req, res) => {
     password,
     phone,
     dateOfBirth,
-    customer,
+    customerId,
   } = req.body;
 
   if (
@@ -76,7 +76,7 @@ export const updateUser = async (req, res) => {
       .input("password", sql.VarChar, hashedPassword)
       .input("telefono", sql.VarChar, phone)
       .input("fechaNacimiento", sql.Date, dateOfBirth)
-      .input("clientes_idClientes", sql.Int, customer)
+      .input("clientes_idClientes", sql.Int, customerId)
       .execute("p_actualizarUsuario");
 
     res.status(200).json({
