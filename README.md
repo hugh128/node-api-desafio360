@@ -29,11 +29,12 @@ La API soporta las siguientes funcionalidades:
 ## Requisitos
 
 Para ejecutar este proyecto, asegúrate de tener instaladas las siguientes depedencias:
-  -bcryptjs": "^2.4.3"
-  -express": "^4.21.2"
-  -dotenv": "^16.4.7"
-  -jsonwebtoken": "^9.0.2"
-  -mssql": "^11.0.1"
+
+- bcryptjs
+- express
+- dotenv
+- jsonwebtoken
+- mssql
 
 ## Variables de entorno
 
@@ -47,3 +48,4 @@ DB_DATABASE = "GDA00593_OT_HUGO_ORDONEZ"
 ## Autor
 
 - Hugo Aroldo Ordoñez Tuch
+- Clave: GDA00593-OT
