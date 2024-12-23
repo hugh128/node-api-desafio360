@@ -21,12 +21,12 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 
 - Resultado:
 
-![Login exitoso](/images/login-exitoso.png)
+![Login exitoso](./images/login-exitoso.png)
 
 - Prueba: Inicio de sesión con credenciales invalidas.
 - Resultado:
 
-![Login invalido](/images/login-invalido.png)
+![Login invalido](./images/login-invalido.png)
 
 ### 2 Estados
 
@@ -56,7 +56,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 
 - Resultado:
 
-![Crear estado](/images/crear-estados.png)
+![Crear estado](./images/crear-estados.png)
 
 2.2 **GET /Obtener estados**  
     `http://localhost:3000/api/v1/estados`
@@ -64,7 +64,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Obtener estados con credenciales validas.
 - Resultado:
 
-![Obtener estados](/images/obtener-estados.png)
+![Obtener estados](./images/obtener-estados.png)
 
 ### 3 Roles
 
@@ -86,7 +86,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 
 - Resultado:
 
-![Crear rol](/images/rol-creacion.png)
+![Crear rol](./images/rol-creacion.png)
 
 3.2 **GET /Obtener roles**  
     `http://localhost:3000/api/v1/roles`
@@ -94,7 +94,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Obtener roles con credenciales validas.
 - Resultado:
 
-![Obtener roles](/images/rol-obtener.png)
+![Obtener roles](./images/rol-obtener.png)
 
 ### 4 Clientes
 
@@ -198,7 +198,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 
 - Resultado:
 
-![Crear cliente](/images/clientes-crear.png)
+![Crear cliente](./images/clientes-crear.png)
 
 4.2 **GET /Obtener clientes**  
     `http://localhost:3000/api/v1/clientes`
@@ -206,7 +206,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Obtener clientes con credenciales validas.
 - Resultado:
 
-![Obtener clientes](/images/clientes-obtener.png)
+![Obtener clientes](./images/clientes-obtener.png)
 
 4.3 **PUT /Actualizar un cliente**  
     `http://localhost:3000/api/v1/clientes/10`
@@ -226,7 +226,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 
 - Resultado:
 
-![Actualizar cliente](/images/cliente-actualizar.png)
+![Actualizar cliente](./images/cliente-actualizar.png)
 
 ### 5 Usuarios
 
@@ -395,7 +395,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 
 - Resultado:
 
-![Crear usuario](/images/usuarios-creacion.png.png)
+![Crear usuario](./images/usuarios-creacion.png)
 
 5.2.1 **GET /Obtener usuarios**  
     `http://localhost:3000/api/v1/usuarios`
@@ -403,7 +403,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Obtener usuarios (solo el Administrador y el Operador pueden obtener usuarios)
 - Resultado:
 
-![Obtener usuarios exitoso](/images/usuarios-obtener-exitoso.png)
+![Obtener usuarios exitoso](./images/usuarios-obtener-exitoso.png)
 
 5.2.2 **GET /Obtener usuarios**  
     `http://localhost:3000/api/v1/usuarios`
@@ -411,7 +411,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Obtener usuarios sin el rol autorizado
 - Resultado:
 
-![Obtener usuarios invalido](/images/usuarios-obtener-invalido.png)
+![Obtener usuarios invalido](./images/usuarios-obtener-invalido.png)
 
 5.3 **PATCH /Actualizar estado de usuario**  
     `http://localhost:3000/api/v1/usuarios/7/estado/`
@@ -419,7 +419,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Actualizar estado de usuario (solo el Administrador y el Operador pueden actualizar estados)
 - Resultado:
 
-![Actualizar estado usuario](/images/usuarios-actualizar-estado.png)
+![Actualizar estado usuario](./images/usuarios-actualizar-estado.png)
 
 ### 6 Categorias
 
@@ -494,7 +494,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 
 - Resultado:
 
-![Crear categoria](/images/categoria-crear.png)
+![Crear categoria](./images/categoria-crear.png)
 
 6.2 **GET /Obtener categorias**  
     `http://localhost:3000/api/v1/categorias`
@@ -502,7 +502,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Obtener categorias con credenciales validas.
 - Resultado:
 
-![Obtener categorias](/images/categorias-obtener.png)
+![Obtener categorias](./images/categorias-obtener.png)
 
 6.3 **PATCH /Actualizar estado de categoria**  
     `http://localhost:3000/api/v1/categorias/10/estado`
@@ -510,7 +510,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Actualizar estado de categorias (solo el Administrador y el Operador pueden actualizar estados)
 - Resultado:
 
-![Actualizar estado categoria](/images/categoria-actualizar-estado.png)
+![Actualizar estado categoria](./images/categoria-actualizar-estado.png)
 
 ### 7 Productos
 
@@ -705,7 +705,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 
 - Resultado:
 
-![Crear producto](/images/productos-crear.png)
+![Crear producto](./images/productos-crear.png)
 
 7.2 **GET /Obtener productos**  
     `http://localhost:3000/api/v1/productos`
@@ -713,7 +713,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Obtener productos con credenciales validas.
 - Resultado:
 
-![Obtener producto](/images/productos-obtener.png)
+![Obtener producto](./images/productos-obtener.png)
 
 7.3 **PATCH /Actualizar estado de productos**  
     `http://localhost:3000/api/v1/productos/10/estado`
@@ -721,7 +721,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Actualizar estado de productos (solo el Administrador y el Operador pueden actualizar estados)
 - Resultado:
 
-![Actualizar estado producto](/images/producto-cambiar-estado.png)
+![Actualizar estado producto](./images/producto-cambiar-estado.png)
 
 ### 8 Ordenes
 
@@ -760,9 +760,9 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 
 - Resultado:
 
-![Crear orden](/images/orden-crear-1.png)
+![Crear orden](./images/orden-crear-1.png)
 
-![Crear orden](/images/orden-crear-2.png)
+![Crear orden](./images/orden-crear-2.png)
 
 8.2 **GET /Obtener ordenes**  
     `http://localhost:3000/api/v1/ordenes`
@@ -770,7 +770,7 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Obtener ordenes con credenciales validas.
 - Resultado:
 
-![Obtener ordenes](/images/orden-obtener.png)
+![Obtener ordenes](./images/orden-obtener.png)
 
 8.3 **GET /Obtener detalles de una orden**  
     `http://localhost:3000/api/v1/ordenes`
@@ -778,9 +778,9 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Obtener detalles de una orden.
 - Resultado:
 
-![Obtener ordenes](/images/orden-detalles-1.png)
+![Obtener ordenes](./images/orden-detalles-1.png)
 
-![Obtener ordenes](/images/orden-detalles-2.png)
+![Obtener ordenes](./images/orden-detalles-2.png)
 
 8.4 **PATCH /Actualizar estado de orden**  
     `http://localhost:3000/api/v1/ordenes/1/estado`
@@ -788,4 +788,4 @@ Para poder acceder a la API se debe iniciar sesión con las credenciales correct
 - Prueba: Actualizar estado de orden
 - Resultado:
 
-![Actualizar estado orden](/images/orden-cambiar-estado.png)
+![Actualizar estado orden](./images/orden-cambiar-estado.png)

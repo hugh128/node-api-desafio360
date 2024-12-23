@@ -44,7 +44,11 @@ DB_PASSWORD = password
 DB_SEVER = localhost
 DB_DATABASE = "GDA00593_OT_HUGO_ORDONEZ"
 ```
+
+## Endpoints validados usando POSTMAN
   
+Registro de pruebas realizados se encuentran en la carpeta "requests"
+
 ## Autor
 
 - Hugo Aroldo Ordoñez Tuch
