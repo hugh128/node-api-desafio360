@@ -43,6 +43,7 @@ DB_USER = nombreUsuario
 DB_PASSWORD = password
 DB_SEVER = localhost
 DB_DATABASE = "GDA00593_OT_HUGO_ORDONEZ"
+JWT_SECRET = "hAo128TopSecreT"
 ```
 
 ## Endpoints validados usando POSTMAN
